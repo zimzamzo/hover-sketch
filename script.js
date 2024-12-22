@@ -17,8 +17,11 @@ function createBoard() {
             boardItem.classList.add("board-item");
             boardRow.appendChild( boardItem );
         }
+
         // append the row to the board
         boardContainer.appendChild( boardRow );
+
+        document.querySelector(".board-value").textContent = boardSize;
     }
 }
 
@@ -30,6 +33,14 @@ function resetBoard() {
     createBoard();
 }
 
+function mouseoverEvent(e) {
+    if (e.target.classList.contains("board-item")) {
+        e.target.style.backgroundColor = "black";
+    }
+}
+
 createBoard();
 
 document.querySelector("button.reset").addEventListener("click", resetBoard);
+
+document.querySelector(".board-container").addEventListener("mouseover", (e) => mouseoverEvent(e));

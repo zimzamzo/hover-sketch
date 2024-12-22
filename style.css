@@ -44,6 +44,7 @@
 button.reset {
     width: 150px;
     font-size: 30px;
+    border-radius: 10px;
 }
 
 .board-container {
@@ -60,5 +61,4 @@ button.reset {
 
 .board-item {
     flex: 1;
-    border-style: solid;
 }
