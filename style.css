@@ -1,3 +1,33 @@
-.simple {
-    color: red;
+.header-container
+.text-container
+.board-container {
+    display: flex;
+}
+
+.header-container {
+
+}
+
+.text-container {
+
+}
+
+.title {
+
+}
+
+.description {
+
+}
+
+.board-value {
+
+}
+
+.reset {
+
+}
+
+.board-container {
+    
 }
