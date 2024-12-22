@@ -8,16 +8,16 @@
 
 .page-container {
     flex-direction: column;
+    width: 1000px;
     padding: 20px;
     margin: 20px;
-    max-width: 1000px;
     border-style: solid;
     border-width: 2px;
     border-radius: 10px;
+    gap: 25px;
 }
 
 .header-container {
-    justify-content: space-between;
 
 }
 
@@ -42,13 +42,16 @@
 }
 
 button.reset {
-    min-width: 150px;
+    width: 150px;
     font-size: 30px;
 }
 
 .board-container {
     flex-direction: column;
     align-items: stretch;
+    justify-content: stretch;
+    height: 1000px;
+    width: 1000px;
 }
 
 .board-row-container {
@@ -57,4 +60,5 @@ button.reset {
 
 .board-item {
     flex: 1;
+    border-style: solid;
 }
