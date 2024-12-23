@@ -55,9 +55,15 @@ function mouseoverEvent(e) {
         }
         else color = "black";
 
-
-
         e.target.style.backgroundColor = color;
+        
+        if (gradientMode) {
+            const opacity = Number(e.target.style.opacity);
+            
+            if (opacity >= 1) e.target.style.opacity = "0.2";
+            else e.target.style.opacity = `${opacity+0.2}`;
+        }
+        else e.target.style.opacity = 1;
     }
 }
 
@@ -70,4 +76,9 @@ document.querySelector(".board-container").addEventListener("mouseover", (e) => 
 document.querySelector(".random-color-checkbox").addEventListener("change", () => {
     if (randomColorMode) randomColorMode = false;
     else randomColorMode = true;
+});
+
+document.querySelector(".gradient-checkbox").addEventListener("change", () => {
+    if (gradientMode) gradientMode = false;
+    else gradientMode = true;
 });
