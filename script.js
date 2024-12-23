@@ -1,5 +1,5 @@
 let boardSize = 16;
-let randomColorMode = true;
+let randomColorMode = false;
 let gradientMode = false;
 
 function createBoard() {
@@ -55,7 +55,7 @@ function mouseoverEvent(e) {
         }
         else color = "black";
 
-        
+
 
         e.target.style.backgroundColor = color;
     }
@@ -66,3 +66,8 @@ createBoard();
 document.querySelector("button.reset").addEventListener("click", resetBoard);
 
 document.querySelector(".board-container").addEventListener("mouseover", (e) => mouseoverEvent(e));
+
+document.querySelector(".random-color-checkbox").addEventListener("change", () => {
+    if (randomColorMode) randomColorMode = false;
+    else randomColorMode = true;
+});
